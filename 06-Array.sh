@@ -1,4 +1,4 @@
 #!/bin/bash
  PERSONS=("ram" "dam" "jam")
 
- echo "first person :${PERSONS[0]}"
+ echo "first person :${PERSONS[3]}"
