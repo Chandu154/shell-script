@@ -2,6 +2,8 @@
 
  # our goal is to install the mysql
 
+DATE=$(date +%F--%H-%M-%S)
+LOCAL=/tmp/
 USERID=$(id -u)
 
 ## This function should  validate the previous command is ececuted success or not .
