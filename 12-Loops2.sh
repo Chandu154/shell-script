@@ -12,6 +12,22 @@ LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 for i in $@
  do 
-  yum install $i -y  
-  #&>>$LOGFILE  
+  yum install $i -y &>>$LOGFILE  
  done 
+STATUS=$i
+
+## sudo sh 12-Loops git postfix
+
+VALIDATE () {
+    #$1 it will receive the arguments.
+    if [ $1 -ne 0 ]
+  then 
+     echo -e "$2... $R Failure $N"
+     exit 1
+  else 
+    echo -e "$2... $G success $N"
+fi   
+} 
+
+VALIDATE $? "installing git"
+ VALIDATE $? "Installing portfix" 
