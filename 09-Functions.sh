@@ -24,12 +24,13 @@ if [ $USERID -ne 0 ]
 fi 
 ## it i sour responsibility again check the installation is success or not  
 ##yum installlll mysql -y 
-yum installww mysql -y 
+yum install mysql -y 
 
-VALIDATE $?  #we are passing the input to function ,exit status of statement 
+VALIDATE $?
+  #we are passing the input to function ,exit status of statement 
     
 
 ## installation of postfix 
- yum installww postfix -y
+ yum install postfix -y
 
  VALIDATE $?
