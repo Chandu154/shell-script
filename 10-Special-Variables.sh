@@ -5,3 +5,5 @@ echo " variable 1:$VAR1"
 echo "all variables:$@"
 
 echo "number of variables :$#"
+
+echo "scrip name:$0"
