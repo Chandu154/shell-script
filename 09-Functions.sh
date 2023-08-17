@@ -11,7 +11,7 @@ VALIDATE () {
      echo "INSTALLATION... Failure"
      exit 1
   else 
-    echo "installation of mysql is success"
+    echo "installation ... success"
 fi   
 }
 
@@ -24,12 +24,12 @@ if [ $USERID -ne 0 ]
 fi 
 ## it i sour responsibility again check the installation is success or not  
 ##yum installlll mysql -y 
-yum install mysql -y 
+yum installww mysql -y 
 
 VALIDATE $?  #we are passing the input to function ,exit status of statement 
     
 
 ## installation of postfix 
- yum install postfix -y
+ yum installww postfix -y
 
  VALIDATE $?
