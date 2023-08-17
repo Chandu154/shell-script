@@ -8,7 +8,7 @@ USERID=$(id -u)
 VALIDATE () {
     if [ $1 -ne 0 ]
   then 
-     echo "installation of mysql is error"
+     echo "INSTALLATION... Failure"
      exit 1
   else 
     echo "installation of mysql is success"
@@ -23,13 +23,13 @@ if [ $USERID -ne 0 ]
     #echo "Info:you are root access" 
 fi 
 ## it i sour responsibility again check the installation is success or not  
-
+##yum installlll mysql -y 
 yum install mysql -y 
 
 VALIDATE $?  #we are passing the input to function ,exit status of statement 
     
 
-## nstallation of post fix 
+## installation of postfix 
  yum install postfix -y
 
  VALIDATE $?
