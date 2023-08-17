@@ -18,7 +18,7 @@ for i in $@
  do 
   yum install $i -y &>>$LOGFILE  
  done 
-STATUS=$i
+STATUS=$i  
 
 ## sudo sh 12-Loops git postfix
 
