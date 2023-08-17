@@ -46,4 +46,4 @@ VALIDATE $? "Installing mysql"
 ## installation of postfix 
  yum install ponnnstfix -y  &>>$LOGFILE 
 
- VALIDATE $? "Installing portfix"
+ VALIDATE $? "Installing portfix" 
