@@ -1,6 +1,5 @@
 #!/bin/bash
 
-yum install mysql -y 
 
 USERID=$(id -u)
 
@@ -10,4 +9,6 @@ if [ $USERID -ne 0 ]
       exit 1
   #else
     #echo "Info:you are root access" 
-fi    
+fi 
+
+yum install mysql -y 
