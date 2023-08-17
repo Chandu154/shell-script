@@ -11,4 +11,4 @@ if [ $USERID -ne 0 ]
     #echo "Info:you are root access" 
 fi 
 
-yum install mysql -y 
+yum install mysqllll -y 
