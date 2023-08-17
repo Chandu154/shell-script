@@ -6,12 +6,13 @@ USERID=$(id -u)
 
 ## This function should  validate the previous command is ececuted success or not .
 VALIDATE () {
+    #$1 it will receive the arguments.
     if [ $1 -ne 0 ]
   then 
-     echo "INSTALLATION... Failure"
+     echo "$2... Failure"
      exit 1
   else 
-    echo "installation ... success"
+    echo "$2... success"
 fi   
 }
 
@@ -26,11 +27,11 @@ fi
 ##yum installlll mysql -y 
 yum install mysql -y 
 
-VALIDATE $?
+VALIDATE $? "Installing mysql"
   #we are passing the input to function ,exit status of statement 
     
 
 ## installation of postfix 
  yum install postfix -y
 
- VALIDATE $?
+ VALIDATE $? "Installing portfix"
