@@ -3,9 +3,11 @@
 yum install mysql -y 
 
 USERID=$(id -u)
+
 if [ $USERID -ne 0 ]
  then 
     echo "error:please run this script with root access"
- #else
+      exit 1
+  #else
     #echo "Info:you are root access" 
 fi    
