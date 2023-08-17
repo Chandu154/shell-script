@@ -38,7 +38,7 @@ fi
 ##yum installlll mysql -y 
 
 yum install mysql -y &>>$LOGFILE 
-
+ 
 VALIDATE $? "Installing mysql"
   #we are passing the input to function ,exit status of statement 
     
