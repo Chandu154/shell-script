@@ -7,7 +7,7 @@ DATE=$(date +%F)
 
 SCRIPT_NAME=$0
 
-LOGFILE=/dev/$SCRIPT_NAME-$DATE.log
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 
 for i in $@
