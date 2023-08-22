@@ -6,13 +6,14 @@
 DATE=$(date +%F)
 
 SCRIPT_NAME=$0
-
-LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+LOGSDIR=/home/centos/shellscript-logs
+#/home/centos/shellscript-logs-scriptname-date.log
+LOGFILE=$LOGSDIR/$SCRIPT_NAME-$DATE.log
 
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
-             
+Y="\e[33m"    
 
 
 USERID=$(id -u)
@@ -25,28 +26,46 @@ if [ $USERID -ne 0 ]
     #echo "Info:you are root access" 
 fi 
 
+VALIDATE(){
+    if [$1 -ne 0 ]
+    then 
+    echo -e "Installing $2 ....$R Failure $N"
+    exit 1
+    else
+    echo -e "Installing $2 ....$G Success $N"
+   fi
+
+}
 
 
 
 
 for i in $@
  do 
-  yum install $i -y &>>$LOGFILE  
+   yum list installed $i &>>$LOGFILE  
+    if [$? -ne 0 ] 
+     then 
+     echo "$i is not installed lets install it"
+     yum install $i -y &>>$LOGFILE  
+     VALIDATE $? "$i"
+    else
+    echo -e  "$Y $i is alredy installed $N"
+    fi
  done 
-STATUS=$i  
 
-## sudo sh 12-Loops git postfix
 
-VALIDATE () {
-    #$1 it will receive the arguments.
-    if [ $1 -ne 0 ]
-  then 
-     echo -e "$2... $R Failure $N"
-     exit 1
-  else 
-    echo -e "$2... $G success $N"
-fi   
-} 
 
-VALIDATE $? "installing git"
- VALIDATE $? "Installing portfix" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
