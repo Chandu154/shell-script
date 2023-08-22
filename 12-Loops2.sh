@@ -8,7 +8,7 @@ DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGSDIR=/home/centos/shellscript-logs
 #/home/centos/shellscript-logs-scriptname-date.log
-LOGFILE=$LOGSDIR/$SCRIPT_NAME-$DATE.log
+LOGFILE=$LOGSDIR/$0-$DATE.log
 
 R="\e[31m"
 G="\e[32m"
