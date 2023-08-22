@@ -44,12 +44,13 @@ for i in $@
    yum list installed $i &>>$LOGFILE  
     if [ $? -ne 0 ] 
      then 
-     echo "$i is not installed lets install it"
-     yum install $i -y &>>$LOGFILE  
-     VALIDATE $? "$i"
+       echo "$i is not installed lets install it"
+       yum install $i -y &>>$LOGFILE  
+       VALIDATE $? "$i"
     else
     echo -e  "$Y $i is alredy installed $N"
     fi
+     
  done 
 
 
