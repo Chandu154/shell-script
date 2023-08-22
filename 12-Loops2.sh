@@ -24,7 +24,7 @@ if [ $USERID -ne 0 ]
       exit 1
   #else
     #echo "Info:you are root access" 
-fi 
+fi    
 
 VALIDATE(){
     if [ $1 -ne 0 ]
