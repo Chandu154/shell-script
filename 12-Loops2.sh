@@ -19,7 +19,7 @@ USERID=$(id -u)
  
 if [ $USERID -ne 0 ]
  then 
-    echo -e " $R error:please run this script with root access $N"
+    echo -e "$R error:please run this script with root access $N"
       exit 1
   #else
     #echo "Info:you are root access" 
