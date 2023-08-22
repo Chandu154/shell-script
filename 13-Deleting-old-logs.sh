@@ -2,7 +2,7 @@
 
 APP_LOGS_DIR=/home/centos/app-logs
 
-DATE=$(date +%F-%H-%M-%S")
+DATE=$(date +%F-%H-%M-%S)
 
 SCRIPT_NAME=$0
 LOGSDIR=/home/centos/shellscript-logs
@@ -15,7 +15,7 @@ echo "script started executing at $DATE"
 
 while read line 
 do
-  echo "deleting $line" &>> $LOGFILE 
+  echo "deleting $line &>> $LOGFILE" 
   rm -rf $line 
     
 done <<< $FILES_TO_DELETE
