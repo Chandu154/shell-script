@@ -12,6 +12,21 @@ LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+             
+
+
+USERID=$(id -u)
+ 
+if [ $USERID -ne 0 ]
+ then 
+    echo " $R error:please run this script with root access $N"
+      exit 1
+  #else
+    #echo "Info:you are root access" 
+fi 
+
+
+
 
 
 for i in $@
