@@ -2,7 +2,8 @@
 
 #clours
 #validations
-# log redirections
+# log redirections                
+#we have to implement above lines 
 
 
 DATE=$(date +%F)
