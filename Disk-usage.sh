@@ -36,3 +36,5 @@ partition=$(echo $line | awk '{print$1}')
 done <<< $DISK_USAGE
 
 echo -e "message: $message"
+
+echo "$message" | mail -s "High Disk Usage" devarachandra4@gmail.com
